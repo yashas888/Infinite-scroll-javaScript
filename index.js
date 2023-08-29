@@ -1,4 +1,5 @@
 const container = document.querySelector(".container");
+const loading = document.querySelector(".loading");
 const API_URL = `https://picsum.photos/id/`;
 
 const generateRandomNumbers = () => {
@@ -23,6 +24,7 @@ window.addEventListener("scroll", () => {
     window.scrollY + window.innerHeight >=
     document.documentElement.scrollHeight
   ) {
+    loading.style.display = "block";
     LoadImages();
   }
 });
