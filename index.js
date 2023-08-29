@@ -9,6 +9,7 @@ const LoadImages = (initialNumberOfImages = 10) => {
   let i = 0;
   while (i < initialNumberOfImages) {
     const img = document.createElement("img");
+    img.loading = "lazy";
     img.src = `${API_URL}${generateRandomNumbers()}/400/500`;
     container.appendChild(img);
     i++;
